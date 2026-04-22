@@ -2,7 +2,7 @@
 
 **Chief Operations Officer (COO)**
 
-\+8801711007888 | [asif.tyro@gmail.com](mailto:asif.tyro@gmail.com) | linkedin.com/in/rahmanasifur | Dhaka, Bangladesh
+\+8801711007888 | [asif.tyro@gmail.com](mailto:asif.tyro@gmail.com) | [linkedin.com/in/rahmanasifur](https://www.linkedin.com/in/rahmanasifur) | Dhaka, Bangladesh
 
 ## EXECUTIVE SUMMARY
 
