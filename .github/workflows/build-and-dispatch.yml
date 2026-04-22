@@ -1,0 +1,49 @@
+name: Build CV and Dispatch
+on:
+  push:
+    paths:
+      - "README.md"
+      - "build.py"
+      - "pdf_style.css"
+      - "fonts/**"
+      - "requirements.txt"
+  workflow_dispatch:
+
+jobs:
+  build-and-dispatch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build CV (only on push)
+        if: github.event_name == 'push'
+        run: |
+          python build.py
+
+      - name: Dispatch to r2
+        env:
+          TOKEN: ${{ secrets.CV_DISPATCH_TOKEN }}
+        run: |
+          curl -X POST https://api.github.com/repos/asif-r-porosh/uraal.online/dispatches \
+            -H "Authorization: token $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -d '{
+              "event_type": "cv_updated",
+              "client_payload": {
+                "repo": "asif-r-porosh/cv",
+                "branch": "main",
+                "commit_sha": "'"${{ github.sha }}"'"
+              }
+            }'
