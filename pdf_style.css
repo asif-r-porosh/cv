@@ -1,0 +1,145 @@
+/* Page Setup */
+
+@page {
+  size: A4;
+  margin: 18mm 18mm 28mm 18mm;
+
+  @bottom-right {
+    content: counter(page);
+    font-size: 10pt;
+    color: #444;
+  }
+}
+
+/* Liberation Sans */
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Inter */
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* HTML Body */
+
+html, body, * {
+  font-family: "Inter","Liberation Sans", Arial, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #111;
+  word-wrap: break-word;
+}
+
+/* Headings */
+
+h1 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+h2, h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+h1 { font-size: 20pt; }
+h2 { font-size: 14pt; }
+h3 { font-size: 13pt; }
+
+/* Paragraph */
+p {
+  margin: 0em 0 0.5em 0;
+  orphans: 2;
+  widows: 2;
+}
+
+/* Lists */
+
+ul {
+  margin: 0.5em 0 0.8em 1.2em;
+  padding: 0;
+}
+
+li {
+  margin: 0.2em 0;
+  page-break-inside: avoid;
+}
+
+/* Links */
+
+a {
+  color: #0b57d0;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+/* Horizontal rule */
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.2em 0;
+  page-break-before: auto;
+}
+
+/* Emphasis */
+
+strong { font-weight: 600; }
+em { font-style: italic; }
