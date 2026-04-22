@@ -135,4 +135,3 @@ The People's University of Bangladesh | 2009
 
 - Bengali (Native)  
 - English (Professional fluency \- written and spoken)
-
