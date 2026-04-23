@@ -37,6 +37,8 @@ Bangladesh's BTRC-mandated A2P SMS Central Platform processing 350M+ messages mo
 
 **Infozillion Teletech BD Ltd** | May 2025 – March 2026
 
+Continued national service assurance leadership during organizational restructuring preceding COO promotion.
+
 - Led national service reliability and operational governance maintaining 99.9%+ uptime across MNOs, IPTSPs, ISPs, and 130+ aggregators  
 - Oversaw 24/7 operations, incident response, high-impact escalations, and regulatory compliance  
 - Drove monitoring, observability, and automation initiatives improving platform resilience
@@ -114,7 +116,12 @@ Bangladesh's third-largest mobile operator serving 35M+ subscribers (VimpelCom s
 
 **2021 – 2023**
 
-After leaving SSL Wireless, pursued freelance software development and consulting projects while seeking leadership roles aligned with expertise in operational governance. Delivered remote technical work for clients in the US, Australia, and Malaysia, including cloud infrastructure projects, API development, system integration, and technical advisory services.
+After leaving SSL Wireless, pursued freelance software development and consulting projects while seeking leadership roles aligned with expertise in operational governance.
+
+- Developed Amazon Connect call center dashboards and reporting systems (Node.js, Express) for Australian contact center operations
+- Built Twilio API integration (Node.js) and Asterisk auto-dialer system (Flask) for Australian telecommunications automation
+- Created patient management system (Django, MySQL) for private medical practice and data analytics dashboard for Dhaka Stock Exchange
+- Delivered web development projects including CMS migration (Grav) and static site development for US clients
 
 ## EDUCATION
 
@@ -126,7 +133,7 @@ The People's University of Bangladesh | 2009
 
 ## CERTIFICATIONS & RECOGNITIONS
 
-- National DR Site Failover Test (2024)  
+- National A2P SMS Hub DR Site Failover Test (2024)  
 - ISO 27001 Audit Preparation (2020)  
 - PCI DSS Compliance Program (2019)  
 - Leadership & Operational Excellence (2018)
@@ -135,4 +142,3 @@ The People's University of Bangladesh | 2009
 
 - Bengali (Native)  
 - English (Professional fluency \- written and spoken)
-
