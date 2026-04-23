@@ -1,4 +1,5 @@
 name: Build CV and Dispatch
+
 on:
   push:
     paths:
@@ -13,6 +14,9 @@ jobs:
   build-and-dispatch:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,14 +27,36 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: github.event_name == 'push'
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build CV (only on push)
+      - name: Build CV
         if: github.event_name == 'push'
         run: |
           python build.py
+
+      - name: Validate outputs
+        if: github.event_name == 'push'
+        run: |
+          test -s cv.pdf
+          test -s cv_raw_html.html
+
+      - name: Commit generated files (only if changed)
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add cv.pdf cv_raw_html.html
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update generated CV [skip ci]"
+            git push
+          fi
 
       - name: Dispatch to r2
         env:
