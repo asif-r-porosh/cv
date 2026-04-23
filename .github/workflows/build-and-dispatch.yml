@@ -75,7 +75,3 @@ jobs:
                 "commit_sha": "'"${{ github.sha }}"'"
               }
             }'
-<<<<<<< HEAD
-            
-=======
->>>>>>> ca00b64106f251eac2b7bb34f4908a4181ca5c61
